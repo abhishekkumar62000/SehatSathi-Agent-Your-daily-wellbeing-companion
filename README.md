@@ -433,7 +433,6 @@ USER OPENS APP
       ├── PHQ-9/GAD-7 totals
       └── Download briefing
 ```
-<div align="center">
 
 ## 👨‍💻 Developer Information  
 **Created by:** **Abhishek Kumar**  
@@ -443,8 +442,7 @@ USER OPENS APP
 
 <br>
 
-## 📸 Developer Profile Image  ![developer](https://github.com/user-attachments/assets/b42929fb-e5c0-4017-a99d-be124683e7bb)
-
+## 📸 Developer Profile Image  
 <img src="<div align="center">
 
 ## 👨‍💻 Developer Information  
@@ -457,6 +455,16 @@ USER OPENS APP
 
 ## 📸 Developer Profile Image  
 <img src="YOUR_IMAGE_LINK_HERE" 
+     width="220" 
+     style="border-radius: 50%; 
+            object-fit: cover; 
+            border: 4px solid #00eaff; 
+            box-shadow: 0 0 18px #00eaff;" 
+     alt="Developer Photo">
+
+</div>
+
+" 
      width="220" 
      style="border-radius: 50%; 
             object-fit: cover; 
