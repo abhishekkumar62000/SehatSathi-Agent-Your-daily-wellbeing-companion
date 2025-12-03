@@ -1,73 +1,266 @@
-# AI Mental Wellbeing Agent Team 🧠
-
-The AI Mental Wellbeing Agent Team is a supportive mental health assessment and guidance system powered by [AG2](https://github.com/ag2ai/ag2?tab=readme-ov-file)(formerly AutoGen)'s AI Agent framework. This app provides personalized mental health support through the coordination of specialized AI agents, each focusing on different aspects of mental health care based on user inputs such as emotional state, stress levels, sleep patterns, and current symptoms. This is built on AG2's new swarm feature run through initiate_swarm_chat() method.
-
-## Features
-
-- **Specialized Mental Wellbeing Support Team**
-    - 🧠 **Assessment Agent**: Analyzes emotional state and psychological needs with clinical precision and empathy
-    - 🎯 **Action Agent**: Creates immediate action plans and connects users with appropriate resources
-    - 🔄 **Follow-up Agent**: Designs long-term support strategies and prevention plans
-
-- **Comprehensive Mental Wellbeing Support**:
-  - Detailed psychological assessment
-  - Immediate coping strategies
-  - Resource recommendations
-  - Long-term support planning
-  - Crisis prevention strategies
-  - Progress monitoring systems
-
-- **Customizable Input Parameters**:
-  - Current emotional state
-  - Sleep patterns
-  - Stress levels
-  - Support system information
-  - Recent life changes
-  - Current symptoms
-
-- **Interactive Results**: 
-   - Real-time assessment summaries
-   - Detailed recommendations in expandable sections
-   - Clear action steps and resources
-   - Long-term support strategies
-
-## How to Run
-
-Follow these steps to set up and run the application:
-
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/Shubhamsaboo/awesome-llm-apps.git
-   cd advanced_ai_agents/multi_agent_apps/ai_mental_wellbeing_agent
-   ```
-
-2. **Install Dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Create Environment File**:
-   Create a `.env` file in the project directory:
-   ```bash
-   echo "AUTOGEN_USE_DOCKER=0" > .env
-   ```
-   This disables Docker requirement for code execution in AutoGen.
-
-4. **Set Up OpenAI API Key**:
-   - Obtain an OpenAI API key from [OpenAI's platform](https://platform.openai.com)
-   - You'll input this key in the app's sidebar when running
-
-5. **Run the Streamlit App**:
-   ```bash
-   streamlit run ai_mental_wellbeing_agent.py
-   ```
+<img width="551" height="602" alt="logo" src="https://github.com/user-attachments/assets/35841e90-077f-47ea-ba6c-20fcfdd3513d" />
+<img width="1920" height="1080" alt="App page" src="https://github.com/user-attachments/assets/1714ed95-e337-485f-806a-419a69fc0544" />
 
 
-## ⚠️ Important Notice
+### App Demo:--
 
-This application is a supportive tool and does not replace professional mental health care. If you're experiencing thoughts of self-harm or severe crisis:
+https://github.com/user-attachments/assets/f80877da-fb9b-4ded-af7f-e0e28dc52570
 
-- Call National Crisis Hotline: 988
-- Call Emergency Services: 911
-- Seek immediate professional help
+
+# 🧑‍⚕️ SehatSathi: Your Daily Wellbeing Companion
+
+Live App: [https://sehatsathi-agent-your-daily-wellbeing-companion.streamlit.app/](https://sehatsathi-agent-your-daily-wellbeing-companion.streamlit.app/)
+
+SehatSathi is an AI-powered daily mental wellbeing companion that blends structured assessment, instant guidance, long-term planning, and smart habit support — all wrapped in a colorful, animated Streamlit interface. The app helps users reflect, regulate, plan, and prepare for professional support when needed.
+
+---
+
+## Purpose
+
+SehatSathi provides a personalized, AI-guided mental wellbeing assistant that performs three core roles:
+
+1. Assess your emotional and mental health with screeners and dynamic triage.
+2. Guide you immediately with coping tools and micro-interventions.
+3. Support your longer-term care with plans, pathway builders, nudges, and handoff summaries.
+
+The UI is colorful, theme-driven, and animation-enhanced to make wellbeing activities feel warm and engaging.
+
+---
+
+## Architecture Overview
+
+• **UI Layer**
+
+* Built in `ai_mental_wellbeing_agent.py`
+* Themed styling powered by `ui_theme.py` and `ui_theme_alt.py`
+* Animated dark UI, neon accents, gradient headers, micro-interactions
+* Live sidebar accent color pickers override CSS variables in real-time
+
+• **LLM Intelligence**
+
+* Primary: AG2/AutoGen Swarm (Assessment → Action → Follow-up)
+* Fallback: OpenAI Python client replicating the same 3-section generation
+* Seamless switching based on availability
+
+• **Config & State**
+
+* Sidebar: API key input, model selector, theme toggle, accent colors
+* Internal: `st.session_state` handles screenings, playlists, mood logs, and plan data
+
+---
+
+## Core Features
+
+### 1. Agent Team Grid
+
+Interactive 3-card system that acts as the main navigation for wellbeing actions:
+
+* **Assess Me** → Opens PHQ/GAD and mood inputs
+* **Guide Me Now** → Coping Toolkit spotlight
+* **Build My Path** → Personalized care pathway generation
+
+### 2. Triage Assistant
+
+Risk-aware triage assistant with:
+
+* PHQ-9 & GAD-7 score interpretation
+* Stress/sleep indicators
+* Detection of crisis keywords
+* Sensitivity slider (low/medium/high)
+* Inline quick actions for grounding, breathing, or outreach
+* Pre-written outreach script for contacting support
+
+### 3. Screening Tools
+
+* **PHQ-9** with total score + severity classification
+* **GAD-7** with total score + severity classification
+* Integrated into triage and plan generation
+
+### 4. Coping Toolkit
+
+Instant micro-interventions for relief:
+
+* Live **box breathing timer**
+* **5-4-3-2-1 grounding exercise** with user notes
+* **Journaling prompts** for reflection and regulation
+
+### 5. Session Playlists
+
+Users can build and run personalized stacks of interventions:
+
+* Add multiple tools to a playlist
+* Run sessions with timers
+* Capture relief ratings (before/after)
+* Chart analytics for each tool
+* Favorite tools for quick access
+
+### 6. Resource Finder
+
+Simple directory with filters for:
+
+* City
+* Affordability
+* Therapist language
+* Remote/in-person
+  Includes customizable outreach message for contacting professionals.
+
+### 7. Progress Tracking
+
+* Weekly check-ins
+* Mood/stress/sleep logs
+* Visual charts
+* Smart Insights & Nudges based on correlations
+
+### 8. Personalized Care Pathways
+
+AI-generated multi-day plan including:
+
+* Daily steps
+* Duration-based guidance
+* Focus areas
+* Custom notes
+* Downloadable markdown
+
+### 9. Habit Coach
+
+* Micro-habits
+* Streak mosaic visualization
+* Trigger-based habit suggestions
+
+### 10. Therapist Handoff
+
+De-identified summary with:
+
+* PHQ-9 and GAD-7 totals
+* Mood notes
+* Key symptoms
+* Recent actions
+* Downloadable markdown handoff
+
+### 11. Downloads
+
+Users can download:
+
+* Final Plan
+* Care Pathway
+* Safety Card
+
+---
+
+## UI / UX Design
+
+### Themes
+
+• Default dark theme
+• “Neon Pulse” — animated neon headers, dividers, button pulses
+• Real-time accent color overrides in sidebar
+
+### Branding
+
+• Sidebar logo: `logo.png`
+• Developer credit section with `developer.jpg` / `developer.png`
+• Gradient headers and animated components
+
+### Interactions
+
+• Micro-animations on buttons, sliders, and section transitions
+• Smooth panel expansions for generated content
+• Playlists and breathing tools animate during use
+
+---
+
+## How the App Works (User Flow)
+
+1. **Enter details:**
+
+   * Mood, stress, sleep quality, support system, recent changes, symptoms
+
+2. **Run screeners (optional):**
+
+   * PHQ-9
+   * GAD-7
+
+3. **Use Agent Actions:**
+
+   * *Assess Me* → Screeners + triage
+   * *Guide Me Now* → Coping tools
+   * *Build My Path* → Care pathways
+
+4. **Generate Plan:**
+
+   * AG2/AutoGen orchestrates 3-step LLM flow
+   * Assessment → Action → Follow-up
+   * Fallback LLM replicates same sections
+   * User views in expanders and downloads markdown
+
+5. **Track Progress:**
+
+   * Weekly check-ins
+   * Mood charts
+   * Smart nudges
+
+6. **Build Playlists & Habits:**
+
+   * Add interventions
+   * Measure relief
+   * Build habits and streaks
+
+7. **Professional Handoff (if needed):**
+
+   * Export a safe, anonymized summary
+
+---
+
+## LLM Flow (Detailed)
+
+### AG2/AutoGen Path
+
+Three agents operate with handoff:
+
+1. **Assessment Agent:**
+
+   * Reviews symptoms, PHQ/GAD, notes, stress/sleep
+
+2. **Action Agent:**
+
+   * Provides grounding, coping, and immediate next steps
+
+3. **Follow-up Agent:**
+
+   * Suggests monitoring, habits, and when to seek help
+
+### OpenAI Fallback
+
+If swarm is unavailable:
+
+* A single LLM produces the three sections
+* App splits text using predefined header markers
+
+### Model Selection
+
+Sidebar allows users to choose:
+
+* GPT-4.x models
+* GPT-3.5 or custom keys
+* Any compatible OpenAI-style model
+
+---
+
+## Summary
+
+SehatSathi functions as a complete, daily mental wellbeing system integrating:
+
+* Intelligent risk-sensitive assessment
+* Immediate grounding/relief tools
+* Structured care planning
+* Smart habit formation
+* Personalized pathways
+* Progress charts
+* Crisis-aware triage
+* Professional handoff preparation
+
+With animated themes, neon UI, modular Streamlit components, and dual-path LLM architecture, it provides an accessible, warm, and intelligent wellbeing companion.
+
+---
+
 
