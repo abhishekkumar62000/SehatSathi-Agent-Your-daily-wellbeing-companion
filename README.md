@@ -263,4 +263,179 @@ With animated themes, neon UI, modular Streamlit components, and dual-path LLM a
 
 ---
 
+---
+
+# ✅ **1) LangGraph-Style Agent Workflow Tree**
+
+```
+                         ┌──────────────────────┐
+                         │   START / USER INPUT │
+                         └──────────┬───────────┘
+                                    │
+                                    ▼
+                     ┌───────────────────────────────┐
+                     │ Collect Mood + Stress + Sleep │
+                     │ + Support + Symptoms + Notes  │
+                     └──────────┬────────────────────┘
+                                │
+                     ┌──────────▼──────────┐
+                     │ Optional Screeners  │
+                     │   PHQ-9 / GAD-7     │
+                     └──────────┬──────────┘
+                                │
+                                ▼
+                    ┌──────────────────────────┐
+                    │ TRIAGE ASSISTANT LOGIC   │
+                    │ • Risk scoring           │
+                    │ • Crisis keyword check   │
+                    │ • Sensitivity slider     │
+                    └──────────┬──────────────┘
+                               │
+                               ▼
+           ┌──────────────────────────────────────────┐
+           │            AGENT TEAM ENTRY              │
+           │ (Triggered by user choice below)         │
+           └─────────────────┬────────────────────────┘
+                             │
+         ┌───────────────────┼───────────────────────┐
+         ▼                   ▼                       ▼
+┌────────────────┐   ┌────────────────┐    ┌─────────────────────┐
+│ Assess Me      │   │ Guide Me Now   │    │ Build My Path       │
+│ (Screen/Plan)  │   │ (Coping Tools) │    │ (Care Pathways)     │
+└───────┬────────┘   └──────┬─────────┘    └────────┬────────────┘
+        │                    │                       │
+        ▼                    ▼                       ▼
+┌────────────────┐   ┌────────────────────┐   ┌────────────────────────┐
+│ Trigger LLM    │   │ Open Toolkit UI    │   │ Trigger Plan Builder   │
+│ Agent Chain    │   │ (Breathing, 54321) │   │ (Goals + Notes)        │
+└───────┬────────┘   └────────┬───────────┘   └────────┬──────────────┘
+        │                     │                       │
+        ▼                     ▼                       ▼
+        ┌───────────────────────────────────────────────────────────────┐
+        │        AG2 / AUTOGEN MULTI-AGENT SEQUENCE                     │
+        └───────────────────────────────────────────────────────────────┘
+                     │                     │                     │
+                     ▼                     ▼                     ▼
+    ┌────────────────────────┐   ┌────────────────────────┐   ┌───────────────────────────┐
+    │ ASSESSMENT AGENT       │ → │ ACTION AGENT           │ → │ FOLLOW-UP AGENT            │
+    │ - Evaluate condition   │   │ - Coping steps         │   │ - Monitoring plan          │
+    │ - Read PHQ/GAD scores  │   │ - Immediate guidance   │   │ - Habits & nudges          │
+    └────────────────────────┘   └────────────────────────┘   └───────────────────────────┘
+                     │                     │                     │
+                     └─────────────────────┴─────────────────────┘
+                                       ▼
+                           ┌─────────────────────┐
+                           │ Structured Output   │
+                           │ • Assessment        │
+                           │ • Action Steps      │
+                           │ • Follow-Up Plan    │
+                           └─────────┬───────────┘
+                                     │
+                                     ▼
+                     ┌─────────────────────────────────┐
+                     │  UI Expanders + Download Files  │
+                     │  (Plan, Care Path, Safety Card) │
+                     └─────────────────┬───────────────┘
+                                       │
+                                       ▼
+                     ┌───────────────────────────────────┐
+                     │ PROGRESS TRACKING + PLAYLISTS     │
+                     │ • Weekly check-ins                │
+                     │ • Relief analytics                │
+                     │ • Insights & Smart Nudges         │
+                     └──────────────────┬────────────────┘
+                                        │
+                                        ▼
+                           ┌────────────────────────────┐
+                           │ Optional Therapist Handoff │
+                           │ (PHQ/GAD + summary MD)     │
+                           └──────────────┬─────────────┘
+                                          │
+                                          ▼
+                                 ┌────────────────┐
+                                 │      END/LOOP  │
+                                 │ (User revisits)│
+                                 └────────────────┘
+```
+
+---
+
+# ✅ **2) Full App Interaction Tree (UI → Logic → Agents → Output)**
+
+```
+USER OPENS APP
+│
+├── Sidebar
+│     ├── API Key
+│     ├── Model
+│     ├── Theme (Default / Neon Pulse)
+│     └── Accent Color Picker
+│
+├── Agent Team Grid
+│     ├── Assess Me → PHQ/GAD → Triage → Agents
+│     ├── Guide Me Now → Coping Toolkit
+│     └── Build My Path → Care Path Generator
+│
+├── User Inputs Page
+│     ├── Mood
+│     ├── Stress
+│     ├── Sleep
+│     ├── Support
+│     ├── Symptoms
+│     └── Journaling Notes
+│
+├── Screeners
+│     ├── PHQ-9 → score → severity
+│     └── GAD-7 → score → severity
+│
+├── Triage System
+│     ├── Risk Flags
+│     ├── Crisis Keywords
+│     ├── Sensitivity Slider
+│     └── Quick Actions (grounding, crisis, outreach)
+│
+├── LLM ROUTE
+│     ├── If AG2 available → Multi-Agent
+│     │        ├── Assessment Agent
+│     │        ├── Action Agent
+│     │        └── Follow-up Agent
+│     └── Else → OpenAI fallback
+│
+├── Output
+│     ├── Assessment Section
+│     ├── Action Plan
+│     └── Follow-Up Strategy
+│
+├── Downloads
+│     ├── Full Plan
+│     ├── Care Pathway
+│     └── Safety Card
+│
+├── Coping Toolkit
+│     ├── Box Breathing Timer
+│     ├── 5-4-3-2-1 grounding
+│     ├── Journal prompts
+│     └── Instant calming actions
+│
+├── Session Playlists
+│     ├── Add tools
+│     ├── Run session
+│     ├── Relief rating
+│     └── Analytics chart
+│
+├── Progress Tracking
+│     ├── Weekly check-ins
+│     ├── Trends chart
+│     └── Smart Nudges
+│
+└── Therapist Handoff
+      ├── De-identified summary
+      ├── PHQ-9/GAD-7 totals
+      └── Download briefing
+```
+
+---
+
+
+
 
