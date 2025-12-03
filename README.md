@@ -438,52 +438,13 @@ USER OPENS APP
 **Created by:** **Abhishek Kumar**  
 **📧 Email:** [abhiydv23096@gmail.com](mailto:abhiydv23096@gmail.com)  
 **🔗 LinkedIn:** [Abhishek Kumar](https://www.linkedin.com/in/abhishek-kumar-70a69829a/)  
-**🐙 GitHub Profile:** [@abhishekkumar62000](https://github.com/abhishekkumar62000)  
+**🐙 GitHub Profile:** [@abhishekkumar62000](https://github.com/abhishekkumar62000)
 
-<br>
+![developer](https://github.com/user-attachments/assets/6283838c-8640-4f22-87d4-6d4bfcbbb093)
 
-## 📸 Developer Profile Image  
-<img src="<div align="center">
-
-## 👨‍💻 Developer Information  
-**Created by:** **Abhishek Kumar**  
-**📧 Email:** [abhiydv23096@gmail.com](mailto:abhiydv23096@gmail.com)  
-**🔗 LinkedIn:** [Abhishek Kumar](https://www.linkedin.com/in/abhishek-kumar-70a69829a/)  
-**🐙 GitHub Profile:** [@abhishekkumar62000](https://github.com/abhishekkumar62000)  
-
-<br>
-
-## 📸 Developer Profile Image  
-<img src="YOUR_IMAGE_LINK_HERE" 
-     width="220" 
-     style="border-radius: 50%; 
-            object-fit: cover; 
-            border: 4px solid #00eaff; 
-            box-shadow: 0 0 18px #00eaff;" 
-     alt="Developer Photo">
-
-</div>
-
-" 
-     width="220" 
-     style="border-radius: 50%; 
-            object-fit: cover; 
-            border: 4px solid #00eaff; 
-            box-shadow: 0 0 18px #00eaff;" 
-     alt="Developer Photo">
-
-</div>
-
-" 
-     width="220" 
-     style="border-radius: 50%; 
-            object-fit: cover; 
-            border: 4px solid #00eaff; 
-            box-shadow: 0 0 18px #00eaff;" 
-     alt="Developer Photo">
-
-</div>
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6283838c-8640-4f22-87d4-6d4bfcbbb093" width="120">
+</p>
 
 
 
