@@ -434,6 +434,37 @@ USER OPENS APP
       └── Download briefing
 ```
 
+4. Optionally, export the diagram from [https://mermaid.live](https://mermaid.live) as a PNG/SVG and upload it to your repo `/assets/` folder.
+
+---
+
+## ❤️ **Made with Passion by Abhishek Yadav & Open-Source Contributors!** 🚀✨
+
+
+<h1 align="center">© LICENSE <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Symbols/Check%20Box%20With%20Check.webp" alt="Check Box With Check" width="25" height="25" /></h1>
+
+<table align="center">
+  <tr>
+     <td>
+       <p align="center"> <img src="https://github.com/malivinayak/malivinayak/blob/main/LICENSE-Logo/MIT.png?raw=true" width="80%"></img>
+    </td>
+    <td> 
+      <img src="https://img.shields.io/badge/License-MIT-yellow.svg"/> <br> 
+This project is licensed under <a href="./LICENSE">MIT</a>. <img width=2300/>
+    </td>
+  </tr>
+</table>
+
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+
+
+
+
+ <hr>
+
+<div align="center">
+<a href="#"><img src="assets/githubgif.gif" width="150"></a>
+	
 ### **Thanks for checking out my GitHub Profile!**  
 
  ## 💌 Sponser
