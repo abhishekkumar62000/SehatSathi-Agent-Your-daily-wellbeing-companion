@@ -440,7 +440,6 @@ USER OPENS APP
 **🔗 LinkedIn:** [Abhishek Kumar](https://www.linkedin.com/in/abhishek-kumar-70a69829a/)  
 **🐙 GitHub Profile:** [@abhishekkumar62000](https://github.com/abhishekkumar62000)
 
-![developer](https://github.com/user-attachments/assets/6283838c-8640-4f22-87d4-6d4bfcbbb093)
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/6283838c-8640-4f22-87d4-6d4bfcbbb093" width="120">
@@ -448,6 +447,9 @@ USER OPENS APP
 
 
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6283838c-8640-4f22-87d4-6d4bfcbbb093" width="120" style="border-radius: 50%;">
+</p>
 
 
 ---
