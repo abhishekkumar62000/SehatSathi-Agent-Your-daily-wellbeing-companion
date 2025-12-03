@@ -449,10 +449,14 @@ USER OPENS APP
 <p align="center">
   <img src="https://github.com/user-attachments/assets/6283838c-8640-4f22-87d4-6d4bfcbbb093" width="120" style="border-radius: 50%;">
 </p>
+</div>  
 
+
+`Don't forget to give A star to this repository ⭐`
+
+
+`👍🏻 All Set! 💌`
+
+</div>
 
 ---
-
-
-
-
